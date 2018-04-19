@@ -32,6 +32,8 @@ alias code='code-oss'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+
+#dotfiles repo in github
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #Perform ls after cd
@@ -39,7 +41,6 @@ chpwd(){
  ls
 }
 
- 
 # PROMPT
 
 # PROMPT='%F{blue}%B%m%f %F{166}%~> %b%f'
@@ -55,22 +56,23 @@ setprompt() {
   fi
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{cyan}[%f
+    %F{203}[%f
     %(!.%F{red}%n%f.%F{green}%n%f)
     %F{203}@%f
-    ${p_host}
-    %F{cyan}][%f
-    %F{blue}%~%f
-    %F{cyan}]%f
+    %F{245}%M%f
+    %F{203}][%f
+    %F{221}%~%f
+    %F{203}]%f
     %(!.%F{red}%#%f.%F{green}%#%f)
     " "
   '}}
 
   PS2=$'%_>'
-  RPROMPT='[%F{yellow}%t%f]'
+  RPROMPT='[%F{203}%t%f]'
 }
 setprompt
 
+#${p_host}
 
 # -- coloured manuals
 man() {
