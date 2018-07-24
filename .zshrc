@@ -26,7 +26,7 @@ bindkey -e
 #Alias
 alias ls='ls --color'
 alias chrome='google-chrome-stable'
-alias code='code-oss'
+#alias code='code-oss'
 
 #Safety First
 alias cp='cp -i'
@@ -91,3 +91,14 @@ man() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Android Studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+
+#Flutter
+export PATH=~/Development/flutter/bin:$PATH
+
